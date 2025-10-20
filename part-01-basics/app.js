@@ -1,26 +1,17 @@
-// 1️⃣ Bir array tanımlayalım
-let meyveler = ["Elma", "Armut", "Muz"];
-console.log("Başlangıç:", meyveler);
+// 1️⃣ undefined örneği
+let isim;
+console.log(isim + 5); // Çıktı: NaN (çünkü undefined + 5 = sayı değil)
+console.log(isim);     // Çıktı: undefined
 
 
-// 2️⃣ join() ile her elemanın arasına '-' koy
-let birlesmis = meyveler.join("-");
-console.log("join ile birleşmiş:", birlesmis);
+// 2️⃣ null örneği
+let yas = null;
+console.log(yas + 5);  // Çıktı: 5 (çünkü null sayısal işlemlerde 0 olarak kabul edilir)
+console.log(yas);      // Çıktı: null
 
 
-// 3️⃣ Yeni bir array ile concat() kullan
-let sebzeler = ["Domates", "Salatalık"];
-let birlesik = meyveler.concat(sebzeler);
-console.log("concat sonucu:", birlesik);
-
-
-// 4️⃣ push() ile yeni eleman ekle
-meyveler.push("Çilek");
-console.log("push sonrası:", meyveler);
-
-
-// 5️⃣ pop() ile son elemanı sil
-let silinen = meyveler.pop();
-console.log("pop sonrası:", meyveler);
-console.log("Silinen eleman:", silinen);
-
+// 3️⃣ Karşılaştırma farkı
+console.log(undefined == null);  // true  → Değer olarak eşit kabul edilir
+console.log(undefined === null); // false → Türleri farklı: 
+                                 // undefined bir "tanımsız değer",
+                                 // null ise "boş değer"dir
